@@ -1,3 +1,5 @@
+// DAOKI Microphones - Data collection
+
 #include <SD.h> // Include the SD library
 const int MIC_PIN = A0; // Connect the microphone to analog pin A0
 const int chipSelect = 10; // Chip select pin for the SD card

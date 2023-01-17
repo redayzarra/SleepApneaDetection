@@ -1,3 +1,5 @@
+// Songhe Light Sensors - Data Collection
+
 #include <SD.h> // Include the SD library
 const int LDR_PIN = A0; // Connect the LDR to analog pin A0
 const int chipSelect = 10; // Chip select pin for the SD card
