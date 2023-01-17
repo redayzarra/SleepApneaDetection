@@ -12,6 +12,12 @@ There is a lack of objective and quantitative data with regards to homebound pat
 
 The objective is to detect changes in the functional status of homebound patients with neurodegenerative disorders based on their movement around their home. In addition, this system will detect if the patient suffers from sleep apnea by collecting daily breathing patterns, with the use of algorithms to make inferences based on data, by the end of April 2023.
 
+### Solutions:
+
+**Movement detection:** ESP32 bluetooth transmitters to detect a wearable device on the target patient. When the device is in range, the system can initialize MLX90640 thermal cameras (unsure) and the central data collection system.
+
+**Sleep detection:** A central data collection hub, powered by an ELEGOO UNO R3 board and several environmental sensors, will initialize to gather as much data as possible. The system collects data regularly when patient is not detected, but is always active when patient is in range. Embedded machine learning models, using TinyML technology, on the microcontroller analyze the data and return results to a server.
+ 
 <div align="center">
 
 <img src="https://user-images.githubusercontent.com/113388793/212787252-fa01d1b9-34f5-4cf9-854a-c7954e988268.png" >
