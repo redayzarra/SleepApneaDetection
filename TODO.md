@@ -13,4 +13,4 @@ This capstone project is for [UMass Chan Medical School](https://www.umassmed.ed
 - [ ] Homespace Website #web @ReDay 2023-01
 
 ### Completed tasks ✓
-<!--> - [x] Completed task title  
+- [x] Completed task title  
