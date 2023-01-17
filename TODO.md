@@ -8,8 +8,9 @@ This capstone project is for [UMass Chan Medical School](https://www.umassmed.ed
 
 
 ### Tasks left
-- [ ] Task title ~3d #type @name yyyy-mm-dd  
-  - [ ] Sub-task or description  
+- [ ] Data Collection #ml @ReDay 2023-01 
+- [ ] Machine Learning Model #ml @ReDay 2023-01
+- [ ] Homespace Website #web @ReDay 2023-01
 
 ### Completed tasks ✓
-- [x] Completed task title  
+<!--> - [x] Completed task title  
