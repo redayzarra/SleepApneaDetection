@@ -27,7 +27,7 @@ The objective is to detect changes in the functional status of homebound patient
 
 ## Project Website
 
-If you would like to find out more about the project, please checkout: [Project Website](https://www.google.com)
+If you would like to find out more about the project, please checkout: [Homespace Project](https://www.redaysblog.com/projects/uml-capstone)
 
 ## Installing the libraries
 
