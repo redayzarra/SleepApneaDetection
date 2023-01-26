@@ -1,16 +1,20 @@
-// Sharp IR Distance Sensor - Data Collection
+// DHT22 Temp & Humidity Sensor - Data Collection
 
 #include <SD.h> // Include the SD library
-const int IR_PIN = A0; // Connect the SHARP IR distance sensor to analog pin A0
+#include <DHT.h> // Include the DHT library
+const int DHT_PIN = 2; // Connect the DHT22 sensor to digital pin 2
 const int chipSelect = 10; // Chip select pin for the SD card
+DHT dht(DHT_PIN, DHT22); // Initialize the DHT object
 File dataFile; // Create a File object
 
 // SD card must be formatted as FAT16 or FAT32 and must be connected to the chipSelect pin and the 3.3V pin. 
 // Also make sure that the library is correctly installed and the board is compatible with SD card module.
 
+
 void setup() {
 
   Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+  dht.begin(); // Initialize the DHT sensor
 
   // Initialize the SD card
   pinMode(chipSelect, OUTPUT);
@@ -26,23 +30,25 @@ void setup() {
     return;
   }
 
-  dataFile.print("Distance"); // Column headers for the .csv file
+  dataFile.print("Temperature,Humidity"); // Column headers for the .csv file
   dataFile.println();
 }
 
 void loop() {
+  float temperature = dht.readTemperature(); // Read the temperature from the DHT22 sensor
+  float humidity = dht.readHumidity(); // Read the humidity from the DHT22 sensor
+
+  Serial.print("Temperature: ");
+  Serial.print(temperature);
+  Serial.print(" Humidity: ");
+  Serial.println(humidity); // Send the values to the serial monitor
   
-  int distance = analogRead(IR_PIN); // Read the value from the SHARP IR distance sensor
-
-  //Convert the analog reading (which goes from 0 - 1023) to distance in cm (0 - 80)
-  distance = map(distance, 0, 1023, 0, 80);
-  Serial.print("Distance: ");
-  Serial.println(distance); // Send the value to the serial monitor
-
-  // Write the value to the .csv file
-  dataFile.print(distance);
+  // Write the values to the .csv file
+  dataFile.print(temperature);
+  dataFile.print(",");
+  dataFile.print(humidity);
   dataFile.println();
-  delay(100); // Wait for 100 milliseconds
+  delay(2000); // Wait for 2 seconds
 }
 
 void exit() {
