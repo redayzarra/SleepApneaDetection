@@ -16,13 +16,34 @@ The objective is to detect changes in the functional status of homebound patient
 
 **Movement detection:** ESP32 Bluetooth transmitters detect a wearable device on the target patient. When the device is in range, the system can initialize MLX90640 thermal cameras (unsure) and the central data collection system.
 
+
+<div align="center" padding-bottom: 100px>
+
+<img src="https://user-images.githubusercontent.com/113388793/214855503-8ecb8aa5-cfe0-4c4e-80c0-b68d7904b775.PNG">
+
+</div>
+
+
+<div align = 'center'>
+
+Flowchart for movement detection
+
+</div>
+
 **Sleep detection:** A central data collection hub, powered by an ELEGOO UNO R3 board and several environmental sensors, will initialize to gather as much data as possible. The system collects data regularly when the patient is not detected but is always active when the patient is in range. Embedded machine learning models, using TinyML technology, on the microcontroller analyze the data and return results to a server.
  
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/113388793/212787252-fa01d1b9-34f5-4cf9-854a-c7954e988268.png" >
+<img src="https://user-images.githubusercontent.com/113388793/214855097-9de0dd4e-f75c-4cd2-baac-8225e80b091e.PNG" >
 
 </div>
+
+<div align = 'center'>
+
+Flowchart for sleep apnea detection
+
+</div>
+
 
 
 ## Project Website
