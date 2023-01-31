@@ -26,7 +26,7 @@ The objective is to detect changes in the functional status of homebound patient
 
 <div align = 'center'>
 
-Flowchart for movement detection
+Flowchart for movement detection - Abhi P.
 
 </div>
 
@@ -40,9 +40,43 @@ Flowchart for movement detection
 
 <div align = 'center'>
 
-Flowchart for sleep apnea detection
+Flowchart for sleep apnea detection - ReDay Z.
 
 </div>
+
+## Plan and Updates
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/113388793/215662202-198059aa-d204-41d2-ba94-17a09e155bfd.jpg" aspect="1" height="1000">
+
+</div>
+
+<div align = 'center'>
+
+Plan for Keyword Spotting Model - ReDay Z.
+
+</div>
+
+**Jan 27th:** Use the microphones to build a keyword spotting model. A keyword spotting model constantly listens for audio to intialize any given processes. For example, "OK Google" will initialize your smartphone assistant. Use the keyword spotting model to allow patients to have ease of access to logging their sleep apnea.
+
+1. A patient who wakes up at night will only have to speak a few words (chosen keyword) before returning back to bed.
+
+2. A dim unintrusive light will go off to verify the model picked up on the keyword.
+
+3. The system will keep track of the exact time and data of when the keyword was spoken
+
+4. Meanwhile, environmental sensors are recording and sending data to the server at all times
+
+5. This process repeats for several days until we finally have a new dataset from the server
+
+6. This dataset has uses the environmental sensor data as features and the keyword initialization as the dependent variable.
+
+7. We can now build a CUSTOM model that can determine when someone is woken up WITHOUT the keyword.
+
+8. New model can be uploaded back to original device through the raspberry pi
+
+9. Continue refining the model.
 
 
 
