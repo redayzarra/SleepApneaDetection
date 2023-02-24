@@ -58,7 +58,7 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
 
     if (found_command[0] == 'u') {
       last_command_time = current_time;
-      digitalWrite(LEDB, LOW);  // Blue for unknown
+      digitalWrite(LEDR, LOW);  // Blue for unknown
     }
   }
 
