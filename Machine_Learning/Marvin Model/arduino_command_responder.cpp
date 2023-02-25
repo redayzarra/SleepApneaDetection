@@ -54,6 +54,8 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
     if (found_command[0] == 'm') {
       last_command_time = current_time;
       digitalWrite(LEDG, LOW);  // Green for Marvin
+      // Execute the file "myfile.ino"
+      #include "CollectData.ino"
     }
 
     if (found_command[0] == 'u') {
