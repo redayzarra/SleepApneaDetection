@@ -10,3 +10,16 @@
 File dataFile;
 
 void setup() {
+
+  Serial.begin(9600);
+  while (!Serial) {}
+
+  if (!HTS.begin()) {
+    Serial.println("Failed to initialize HTS sensor!"); // Give a warning if HTS Sensor fails
+    while (1);
+  }
+
+  if (!LPS22HB.begin()) {
+    Serial.println("Failed to initialize LPS sensor!"); // Give a warning if LPS Sensor fails
+    while (1);
+  }
