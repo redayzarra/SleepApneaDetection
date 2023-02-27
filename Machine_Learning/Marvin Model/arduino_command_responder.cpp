@@ -48,23 +48,25 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
   static int certainty = 220;
 
   if (is_new_command) {
-      TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
-                          score, current_time);
-      if (found_command[0] == 'm') {
-        last_command_time = current_time;
-        digitalWrite(LEDG, LOW);  // Green for command heard
-        
-        // If CollectData is already running, terminate the process
-        if (collect_data_pid != -1) {
-            std::string kill_cmd = "kill " + std::to_string(collect_data_pid);
-            system(kill_cmd.c_str());
-            collect_data_pid = -1;
-        }
+    TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
+                        score, current_time);
+    if (found_command[0] == 'm') {
+      last_command_time = current_time;
+      digitalWrite(LEDG, LOW);  // Green for command heard
+      if (!is_collecting) {
+        startCollectData();
+      } else {
+        stopCollectData();
+      }
+    }
 
     if (found_command[0] == 'u') {
       last_command_time = current_time;
       digitalWrite(LEDR, LOW);  // Red for unknown
     }
+
+    // Toggle the LED every time an inference is performed.
+    digitalWrite(LED_BUILTIN, digitalRead(LED_BUILTIN) ^ 1);
   }
 
   // If last_command_time is non-zero but was >3 seconds ago, zero it
