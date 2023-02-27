@@ -38,3 +38,10 @@ void setup() {
     Serial.println("Failed to initialize SD card!"); // Give a warning if SD Card fails
     while (1);
   }
+
+  dataFile = SD.open("data.csv", FILE_WRITE);
+
+  if (!dataFile) {
+    Serial.println("Failed to open data.csv file!"); // Give a warning if csv file can't open
+    while (1);
+}
