@@ -49,24 +49,17 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
 
   if (is_new_command) {
     TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
-                        score, current_time);
+                         score, current_time);
+    // If we hear a command, light up the appropriate LED
     if (found_command[0] == 'm') {
       last_command_time = current_time;
-      digitalWrite(LEDG, LOW);  // Green for command heard
-      if (!is_collecting) {
-        startCollectData();
-      } else {
-        stopCollectData();
-      }
+      digitalWrite(LEDG, LOW);  // Green for yes
     }
 
     if (found_command[0] == 'u') {
       last_command_time = current_time;
-      digitalWrite(LEDR, LOW);  // Red for unknown
+      digitalWrite(LEDB, LOW);  // Blue for unknown
     }
-
-    // Toggle the LED every time an inference is performed.
-    digitalWrite(LED_BUILTIN, digitalRead(LED_BUILTIN) ^ 1);
   }
 
   // If last_command_time is non-zero but was >3 seconds ago, zero it
