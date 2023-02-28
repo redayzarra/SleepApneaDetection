@@ -50,8 +50,12 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
   if (is_new_command) {
     TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
                          score, current_time);
+
+    static int count = 0; // Initialize count to keep track of whether or not we should be collecting data
+
     // If we hear a command, light up the appropriate LED
     if (found_command[0] == 'm') {
+      count++; // Increment count
       last_command_time = current_time;
       digitalWrite(LEDG, LOW);  // Green for yes
     }
