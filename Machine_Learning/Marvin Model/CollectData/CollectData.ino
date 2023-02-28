@@ -1,12 +1,13 @@
 // Initialize data collection for all sensors
 
-#include <Wire.h> // Include essential headers for senors and SD card
-#include <Arduino_HTS221.h>
-#include <Arduino_LPS22HB.h>
-#include <Arduino_APDS9960.h>
+#include <Wire.h> // Include the necessary libraries to read the data from sensors
 #include <Arduino_LSM9DS1.h>
-#include <SD.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_APDS9960.h>
+#include <Adafruit_LPS22HB.h>
+#include <Adafruit_HTS221.h>
 
-File dataFile;
-
-
+// Define the sensors
+Adafruit_APDS9960 apds;
+Adafruit_LPS22HB lps;
+Adafruit_HTS221 hts;
