@@ -17,9 +17,13 @@ bool isCollectingData = false; // This boolean value checks to see if we should 
 void setup() {
   Serial.begin(9600);
   while (!Serial); // Wait for Serial Monitor to open
-  
+
   // Set up the APDS9960 sensor
   if (!apds.begin()) {
     Serial.println("Failed to initialize APDS9960");
     while (1);
   }
+
+  apds.enableGestureSensor(false); // Disable the gesture feature from the sensor
+  apds.enableLightSensor(true); // Enable the light and proximity features
+  apds.enableProximitySensor(true);
