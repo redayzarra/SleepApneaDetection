@@ -34,3 +34,10 @@ void setup() {
     Serial.println("Failed to initialize LPS22HB");
     while (1);
   }
+
+  // Set up the HTS221 sensor
+  if (!hts.begin()) {
+    Serial.println("Failed to initialize HTS221");
+    while (1);
+  }
+}
