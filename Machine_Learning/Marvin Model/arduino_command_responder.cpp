@@ -55,9 +55,16 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
 
     // If we hear a command, light up the appropriate LED
     if (found_command[0] == 'm') {
-      count++; // Increment count
+
+      count++; // Increment count      
       last_command_time = current_time;
-      digitalWrite(LEDG, LOW);  // Green for yes
+      digitalWrite(LEDG, LOW);  // Green for marvin
+    }
+
+    if (count % 2 == 1) {
+      Serial.write('m');
+    } else {
+      Serial.write('s');
     }
 
     if (found_command[0] == 'u') {
