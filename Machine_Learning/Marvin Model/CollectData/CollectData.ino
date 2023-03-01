@@ -41,3 +41,10 @@ void setup() {
     while (1);
   }
 }
+
+// Conditions for collecting data: We need to make sure we only start collecting data when we recieve the 
+//                                 correct signal from the command responder.
+
+void loop() {
+  if (Serial.available()) {
+    char command = Serial.read();
