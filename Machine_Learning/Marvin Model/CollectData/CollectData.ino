@@ -18,7 +18,7 @@ void setup() {
   Serial.begin(9600);
   while (!Serial); // Wait for Serial Monitor to open
 
-  // Set up the APDS9960 sensor
+  // Set up the APDS9960 sensor - Light and Proximity Sensor
   if (!apds.begin()) {
     Serial.println("Failed to initialize APDS9960");
     while (1);
@@ -27,3 +27,10 @@ void setup() {
   apds.enableGestureSensor(false); // Disable the gesture feature from the sensor
   apds.enableLightSensor(true); // Enable the light and proximity features
   apds.enableProximitySensor(true);
+
+
+  // Set up the LPS22HB sensor - Barometric Pressure
+  if (!lps.begin()) {
+    Serial.println("Failed to initialize LPS22HB");
+    while (1);
+  }
