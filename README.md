@@ -58,7 +58,7 @@ Flowchart for sleep apnea detection - ReDay Z.
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/113388793/215662202-198059aa-d204-41d2-ba94-17a09e155bfd.jpg" aspect="1" height="1000">
+<img src="https://user-images.githubusercontent.com/113388793/215662202-198059aa-d204-41d2-ba94-17a09e155bfd.jpg" aspect="1">
 
 </div>
 
