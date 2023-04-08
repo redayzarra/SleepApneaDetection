@@ -1,0 +1,3 @@
+0 Aberto
+1 Background Noise
+2 Silencio
