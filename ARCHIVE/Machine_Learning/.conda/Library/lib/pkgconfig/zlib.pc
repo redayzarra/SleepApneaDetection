@@ -1,0 +1,13 @@
+prefix=c:/Users/reday/Documents/Homespace-Capstone/Machine_Learning/.conda/Library
+exec_prefix=c:/Users/reday/Documents/Homespace-Capstone/Machine_Learning/.conda/Library
+libdir=c:/Users/reday/Documents/Homespace-Capstone/Machine_Learning/.conda/Library/lib
+sharedlibdir=c:/Users/reday/Documents/Homespace-Capstone/Machine_Learning/.conda/Library/lib
+includedir=c:/Users/reday/Documents/Homespace-Capstone/Machine_Learning/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
