@@ -58,3 +58,31 @@ ser = serial.Serial('/dev/ttyACM0', 9600)  # You may need to adjust the port dep
 audio_buffer = []
 buffer_size = 16000  # Adjust this value based on the desired buffer size. This processes one second of audio at a time (assuming a sample rate of 16,000 Hz).
 
+while True:
+    try:
+        data = ser.readline().decode().strip()
+        print("Received data:", data)
+
+        if data.startswith("Temperature:"):
+            # Assuming data is in the format: "Temperature: xx.x Humidity: xx.x R: xxx G: xxx B: xxx"
+            data_list = data.split(' ')
+
+            if len(data_list) == 12:
+                temp = float(data_list[1])
+                humidity = float(data_list[3])
+                r = int(data_list[5])
+                g = int(data_list[7])
+                b = int(data_list[9])
+
+                # Prepare the data for MongoDB
+                data_to_insert = {
+                    "temperature": temp,
+                    "humidity": humidity,
+                    "r": r,
+                    "g": g,
+                    "b": b,
+                    "timestamp": time.time()
+                }
+
+    except Exception as e:
+        print("Error:", e)
