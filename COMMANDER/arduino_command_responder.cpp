@@ -110,11 +110,15 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
                          score, current_time);
 
     // Enable or disable data collection based on the command
-    if (found_command[0] == 'y') {
-      collect_data = true;
+    if (found_command[0] == 'l') {
+      collect_data = true; // If the "learn" keyword is detected, start data collection
     }
-    if (found_command[0] == 'n') {
-      collect_data = false;
+    if (found_command[0] == 's') {
+      collect_data = false; // If the "stop" keyword is detected, stop data collection
+    }
+    if (found_command[0] == 'u') {
+      last_command_time = current_time;
+      digitalWrite(LEDB, LOW);  // Led flashes blue for unknown
     }
   }
 
