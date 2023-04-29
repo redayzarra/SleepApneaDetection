@@ -84,5 +84,10 @@ while True:
                     "timestamp": time.time()
                 }
 
+                # Insert data into MongoDB
+                result = collection.insert_one(data_to_insert)
+                print("Data inserted with ID:", result.inserted_id)
+
+
     except Exception as e:
         print("Error:", e)
