@@ -88,6 +88,28 @@ while True:
                 result = collection.insert_one(data_to_insert)
                 print("Data inserted with ID:", result.inserted_id)
 
+        elif data.startswith("Audio:"):
+            audio_sample = int(data.split(' ')[1])
+            audio_buffer.append(audio_sample)
+
+            if len(audio_buffer) >= buffer_size:
+                filtered_signal = process_audio_for_breathing(np.array(audio_buffer, dtype=np.float32))
+                breaths_per_minute = calculate_breaths_per_minute(filtered_signal, sample_rate=16000)
+
+                print("Breaths per minute:", breaths_per_minute)
+
+                # Prepare the data for MongoDB - You can change this format however you like.
+                data_to_insert = {
+                    "breaths_per_minute": breaths_per_minute,
+                    "timestamp": time.time()
+                }
+
+                # Insert data into MongoDB - Data ID so you can find the problematic data (god forbid) and debug it.
+                result = collection.insert_one(data_to_insert)
+                print("Data inserted with ID:", result.inserted_id)
+
+                # Clear the buffer for the next set of samples
+                audio_buffer = []
 
     except Exception as e:
         print("Error:", e)
