@@ -48,10 +48,10 @@ def calculate_breaths_per_minute(filtered_signal, sample_rate, min_peak_height=0
     return breaths_per_minute
 
 # MongoDB configuration - The following are credentials to connect to MongoDB
-MONGODB_CONNECTION_STRING = 'mongodb+srv://<username>:<password>@<cluster_url>/test?retryWrites=true&w=majority'
+MONGODB_CONNECTION_STRING = 'mongodb+srv://abhipatel499:Homespace22503@homespacemovementdata.lfcn3ck.mongodb.net/?retryWrites=true&w=majority'
 client = MongoClient(MONGODB_CONNECTION_STRING)
-db = client['your_database_name'] # This is the database name
-collection = db['your_collection_name'] # This is the collection name
+db = client['sleepdata'] # This is the database name
+collection = db['Sensors_and_Breaths'] # This is the collection name
 
 ser = serial.Serial('/dev/ttyACM0', 9600)  # You may need to adjust the port depending on your setup
 
