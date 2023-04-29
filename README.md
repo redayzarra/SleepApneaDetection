@@ -1,4 +1,4 @@
-# Homespace Data Acquisition - UML Capstone
+# Homespace Data Acquisition - Capstone for UMass Medical School
 
 ## Table of contents
 
