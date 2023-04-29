@@ -10,6 +10,8 @@ commands in the terminal:
 
 ~ pip3 install dnspython
 
+~ pip install pyserial
+
 
 The MongoDB connection string and database should all be integrated into
 the code. In case you need to alter this further, I have left comments
