@@ -1,0 +1,20 @@
+To configure the Raspberry Pi (it should have the following things), 
+please install (or reinstall) the necessary items with the following 
+commands in the terminal:
+
+~ sudo apt-get install python3
+
+~ sudo apt-get install python3-pip
+
+~ pip3 install pymongo
+
+~ pip3 install dnspython
+
+
+The MongoDB connection string and database should all be integrated into
+the code. In case you need to alter this further, I have left comments
+in the code to explain things. 
+
+You may also need to change the various parameters based on your 
+environments and testing. The values I have worked for my room, they 
+most likely will need to be adjusted to work with yours.

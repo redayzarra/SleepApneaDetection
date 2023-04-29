@@ -1,3 +1,7 @@
+# This file will need to be running to establish connection with MongoDB,
+# and process and transfer data and audio to the database.
+# RASPBERRY PI 3 - MODEL B
+
 import serial
 import pymongo
 from pymongo import MongoClient
