@@ -154,3 +154,12 @@ ifconfig wlan0
 - Say the keyword "learn" to start data collection. The Arduino will collect data from the temperature, humidity, color sensors, and the microphone.
 - The Raspberry Pi processes the data, including analyzing the audio to determine breaths per minute, and stores the data in a MongoDB database.
 - Say the keyword "stop" to stop data collection.
+
+## License
+I have cited open source code to their authors. The following sections of this project are my own, but free to use under [MIT license](https://choosealicense.com/licenses/mit/).
+
+1. Machine Learning Models 
+2. Arduino command responder
+3. Raspberry PI data transfer code
+4. Raspberry PI and MongoDB connection code
+5. Breath Detection code (Raspberry PI script)
