@@ -86,6 +86,20 @@ For a fun exercise, let's examine the spectrograms of my room's background noise
 
 This project utilizes an Arduino Nano 33 BLE Sense board to listen for specific voice commands and respond by collecting sensor data. The Arduino board is equipped with a microphone and various sensors, including temperature, humidity, and color sensors. The keyword spotting model is implemented using TensorFlow Lite Micro, which allows the board to recognize specific keywords like "learn" and "stop."
 
+## File Navigation
+
+1. Archive - included in this project serves as a repository for earlier ideas and attempts that, although did not lead to significant progress or success, contributed to the learning process and development of the final solution.
+
+2. Collecting_Data - dedicated to the initial testing and validation of the sensors and other hardware components, ensuring that the project's goals are achievable. This folder contains various code snippets, scripts, and resources designed to test the functionality and reliability of the sensors, as well as to verify their compatibility with the chosen platform.
+
+3. COMMANDER - houses the essential code and resources for the final Arduino hardware and the command responder. This folder serves as the core of the project's functionality, focusing on the integration of the Arduino Nano 33 BLE Sense board and the implementation of the command responder.
+
+4. ML-KeywordSpotting - dedicated to the exploration and evaluation of various machine learning models and trials, with the goal of identifying the most efficient solution for the sleep apnea detection system. This folder contains an assortment of machine learning approaches, algorithms, and techniques that have been tested and refined throughout the project's development process. 
+
+5. ML-LearnStopModel - contains the essential files for the final machine learning model used in the sleep apnea detection system. This folder serves as a streamlined repository for the key components needed to implement the chosen model, making it easy for the project team to integrate it with the rest of the system.
+
+6. RASPBERRYPI - contains the final code for the Raspberry Pi component of the sleep apnea detection system. This folder is specifically dedicated to the data transfer and audio processing scripts required for the Raspberry Pi to effectively communicate with the Arduino and process the collected data. In addition to the core Python scripts for data transfer and audio processing, folder V also contains a README file that provides detailed instructions on how to configure the Raspberry Pi and set up the necessary dependencies for the system to function smoothly. 
+
 ## Installing Dependencies
 
 #### Arduino Nano 33 BLE Sense board
