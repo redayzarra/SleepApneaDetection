@@ -1,14 +1,24 @@
 # Homespace Data Acquisition - Capstone for UMass Medical School
 
-## Table of contents
-
--   [Overview](#overview)
--   [Solution](#solution)
--   [Final Product](#sleep-apnea-detection-system)
--   [Installing Dependencies](#installing-dependencies)
--   [Hardware Setup](#hardware-setup)
--   [User Manual](#user-manual)
--   [License](#license)
+## Table of Contents
+1. [Overview](#overview)
+    - [Problem Statement](#problem-statement)
+    - [Objective Statement](#objective-statement)
+2. [Solution](#solution)
+3. [Sleep Apnea Detection System](#sleep-apnea-detection-system)
+4. [File Navigation](#file-navigation)
+5. [Installing Dependencies](#installing-dependencies)
+    - [Arduino Nano 33 BLE Sense board](#arduino-nano-33-ble-sense-board)
+    - [Raspberry Pi](#raspberry-pi)
+    - [Installing Dependencies on Raspberry Pi](#installing-dependencies-on-raspberry-pi)
+    - [Arduino Command Responder Code Structure](#arduino-command-responder-code-structure)
+6. [Hardware Setup](#hardware-setup)
+    - [Setting Up the Arduino Nano 33 BLE Sense Board](#setting-up-the-arduino-nano-33-ble-sense-board)
+    - [Setting Up the Raspberry Pi](#setting-up-the-raspberry-pi)
+7. [User Manual](#user-manual)
+    - [Running the System](#running-the-system)
+    - [Using the System](#using-the-system)
+8. [License](#license)
 
 ## Overview
 
