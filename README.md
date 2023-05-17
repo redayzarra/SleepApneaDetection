@@ -1,5 +1,7 @@
 # Homespace Data Acquisition - Capstone for UMass Medical School
 
+Welcome to my capstone project! I focused on creating a **personalized home monitoring system for sleep apnea patients**. Leveraging machine learning, hardware, and web development, I aim to improve treatment plans and enhance patient's quality of life through insightful data analysis.
+
 ## Table of Contents
 1. [Overview](#overview)
     - [Problem Statement](#problem-statement)
