@@ -87,13 +87,6 @@ For a fun exercise, let's examine the spectrograms of my room's background noise
   </table>
 </div>
 
-
-
-
-
- 
-
-
 # Sleep Apnea Detection System
 
 This project utilizes an Arduino Nano 33 BLE Sense board to listen for specific voice commands and respond by collecting sensor data. The Arduino board is equipped with a microphone and various sensors, including temperature, humidity, and color sensors. The keyword spotting model is implemented using TensorFlow Lite Micro, which allows the board to recognize specific keywords like "learn" and "stop."
@@ -225,7 +218,7 @@ ifconfig wlan0
 - Say the keyword "stop" to stop data collection.
 
 ## License
-I have cited open source code to their authors. The following sections of this project are my own, but free to use under [MIT license](https://choosealicense.com/licenses/mit/).
+I have cited open source code to their authors. The following sections of this project are my own, but free to use under the [MIT license](https://github.com/redayzarra/sleep-apnea-detection/blob/master/LICENSE).
 
 1. Machine Learning Models 
 2. Arduino command responder
